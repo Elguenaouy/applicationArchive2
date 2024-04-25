@@ -21,6 +21,9 @@ Route::middleware('auth')->group(function () {
 
 Route::get("/bac",[StagiaireController::class,"listebac"])->name('stgbac');
 
+Route::get('/export', [StagiaireController::class,"export"])->name("export");
+
+
 Route::get("/bacDiplome",[StagiaireController::class,"bacdiplome"])->name('bacdiplome');
 Route::get("/diplome",[StagiaireController::class,"listediplome"])->name('stgdiplome');
 

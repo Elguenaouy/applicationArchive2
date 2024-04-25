@@ -6,12 +6,29 @@ use App\Models\Stagiaire;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Exports\ExportE;
+use Maatwebsite\Excel\Facades\Excel;
 
 class StagiaireController extends Controller
 {
     // public function index(){
     //     return view('etudiant.accueil');
     // }
+
+
+
+ 
+    
+    public function export()
+    {
+        return Excel::download(new ExportE, 'stagiaire.xlsx');
+    }
+    
+
+
+
+
+
     public function listebac(request $req)
     {
         $rech =$req->input("txtCh");

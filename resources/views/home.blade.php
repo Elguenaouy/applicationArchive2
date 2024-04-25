@@ -66,7 +66,12 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
   
-
+<form action="{{route('export')}}" method="GET">
+  @csrf
+  <button type="submit" class="btn btn-success ">
+    Export
+  </button>
+</form>
         <table class="table table-hover">
         <tr>
             <th>CIN</th>
